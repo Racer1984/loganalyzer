@@ -15,35 +15,36 @@ the regular expression capturing the date and time must be updated accordingly.
 **Installation**
 
 **pytholog.py** - Python script (Python3) for collecting and parsing log files.
+
 **storages.py** - classes which represent the database connection objects.
 
-Clone these files to /opt directory.
+Clone these files to *opt* directory.
 
-Create a service file for systemd:
- sudo vi /usr/lib/systemd/system/pytholog.service
+Create a service file for **systemd**:
+ *sudo vi /usr/lib/systemd/system/pytholog.service*
  
 Add the following content in it:
- [Unit]
+ **[Unit]
  Description=Python Log Parser
- After=multi-user.target
+ After=multi-user.target**
  
- [Service]
+ **[Service]
  Type=simple
  ExecStart=/usr/bin/python3.6 /opt/pytholog.py
- Restart=always
+ Restart=always**
  
- [Install]
- WantedBy=multi-user.target
+ **[Install]
+ WantedBy=multi-user.target**
 
 Reload the systemctl daemon to read new service file
- sudo systemctl daemon-reload
+ *sudo systemctl daemon-reload*
 
 Enable the service to start on system boot, then start the service.
- sudo systemctl enable pytholog.service
- sudo systemctl start pytholog.service
+ *sudo systemctl enable pytholog.service*
+ *sudo systemctl start pytholog.service*
  
 Check the status of the service. 
- sudo systemctl status pytholog.service
+ *sudo systemctl status pytholog.service*
 
 The similar output should be presented:
 
