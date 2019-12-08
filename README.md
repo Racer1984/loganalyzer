@@ -1,4 +1,4 @@
-Log Analyzer
+**Log Analyzer**
 
 What is it?
 
