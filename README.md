@@ -21,43 +21,43 @@ the regular expression capturing the date and time must be updated accordingly.
 * Clone the files above to *opt* directory.
 * Create a service file for **systemd**:
 
- *sudo vi /usr/lib/systemd/system/pytholog.service*
+     *sudo vi /usr/lib/systemd/system/pytholog.service*
  
 * Add the following content in it:
 
- **[Unit]**
+     **[Unit]**
  
- **Description=Python Log Parser**
+     **Description=Python Log Parser**
  
- **After=multi-user.target**
+     **After=multi-user.target**
  
- **[Service]**
+     **[Service]**
  
- **Type=simple**
- **ExecStart=/usr/bin/python3.6 /opt/pytholog.py**
- **Restart=always**
+     **Type=simple**
+     **ExecStart=/usr/bin/python3.6 /opt/pytholog.py**
+     **Restart=always**
  
- **[Install]**
- WantedBy=multi-user.target**
+     **[Install]**
+     **WantedBy=multi-user.target**
 
-Reload the systemctl daemon to read new service file
- *sudo systemctl daemon-reload*
+* Reload the systemctl daemon to read new service file
+     *sudo systemctl daemon-reload*
 
-Enable the service to start on system boot, then start the service.
- *sudo systemctl enable pytholog.service*
- *sudo systemctl start pytholog.service*
+* Enable the service to start on system boot, then start the service.
+     *sudo systemctl enable pytholog.service*
+     *sudo systemctl start pytholog.service*
  
-Check the status of the service. 
- *sudo systemctl status pytholog.service*
+* Check the status of the service. 
+     *sudo systemctl status pytholog.service*
 
-The similar output should be presented:
+    The similar output should be presented:
 
- ● pytholog.service - Python Log Parser
-    Loaded: loaded (/usr/lib/systemd/system/pytholog.service; enabled; vendor preset: disabled)
-    Active: active (running) since Sun 2019-12-08 23:31:00 MSK; 59min ago
-  Main PID: 19690 (python3.6)
-    CGroup: /system.slice/pytholog.service
-            └─19690 /usr/bin/python3.6 /opt/pytholog.py
+     ● pytholog.service - Python Log Parser
+        Loaded: loaded (/usr/lib/systemd/system/pytholog.service; enabled; vendor preset: disabled)
+        Active: active (running) since Sun 2019-12-08 23:31:00 MSK; 59min ago
+      Main PID: 19690 (python3.6)
+        CGroup: /system.slice/pytholog.service
+                └─19690 /usr/bin/python3.6 /opt/pytholog.py
  
- Dec 08 23:31:00 uldcbpans10.eur.mkcorp.com systemd[1]: Started Python Log Parser.
- Dec 08 23:31:00 uldcbpans10.eur.mkcorp.com systemd[1]: Starting Python Log Parser...
+     Dec 08 23:31:00 uldcbpans10.eur.mkcorp.com systemd[1]: Started Python Log Parser.
+     Dec 08 23:31:00 uldcbpans10.eur.mkcorp.com systemd[1]: Starting Python Log Parser...
