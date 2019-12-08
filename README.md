@@ -1,6 +1,6 @@
 **Log Analyzer**
 
-What is it?
+**What is it?**
 
 This script tails the log files (files with .log extension) recursively 
 in a custom directory (which is hard-coded inside the script), normalizes them 
@@ -12,10 +12,10 @@ logs and for Apache access logs). In case it is necessary to support more,
 the regular expression capturing the date and time must be updated accordingly.
 
 
-Installation
+**Installation**
 
-pytholog.py - Python script (Python3) for collecting and parsing log files.
-storages.py - classes which represent the database connection objects.
+**pytholog.py** - Python script (Python3) for collecting and parsing log files.
+**storages.py** - classes which represent the database connection objects.
 
 Clone these files to /opt directory.
 
