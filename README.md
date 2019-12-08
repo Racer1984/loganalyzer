@@ -18,27 +18,26 @@ the regular expression capturing the date and time must be updated accordingly.
 
 **storages.py** - classes which represent the database connection objects.
 
-Clone these files to *opt* directory.
-
-Create a service file for **systemd**:
+* Clone the files above to *opt* directory.
+* Create a service file for **systemd**:
 
  *sudo vi /usr/lib/systemd/system/pytholog.service*
  
-Add the following content in it:
+* Add the following content in it:
 
- **[Unit]
+ **[Unit]**
  
  **Description=Python Log Parser**
  
  **After=multi-user.target**
  
- **[Service]
+ **[Service]**
  
  **Type=simple**
  **ExecStart=/usr/bin/python3.6 /opt/pytholog.py**
  **Restart=always**
  
- **[Install]
+ **[Install]**
  WantedBy=multi-user.target**
 
 Reload the systemctl daemon to read new service file
