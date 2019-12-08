@@ -21,17 +21,22 @@ the regular expression capturing the date and time must be updated accordingly.
 Clone these files to *opt* directory.
 
 Create a service file for **systemd**:
+
  *sudo vi /usr/lib/systemd/system/pytholog.service*
  
 Add the following content in it:
+
  **[Unit]
- Description=Python Log Parser
- After=multi-user.target**
+ 
+ **Description=Python Log Parser**
+ 
+ **After=multi-user.target**
  
  **[Service]
- Type=simple
- ExecStart=/usr/bin/python3.6 /opt/pytholog.py
- Restart=always**
+ 
+ **Type=simple**
+ **ExecStart=/usr/bin/python3.6 /opt/pytholog.py**
+ **Restart=always**
  
  **[Install]
  WantedBy=multi-user.target**
