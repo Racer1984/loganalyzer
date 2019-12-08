@@ -40,14 +40,17 @@ the regular expression capturing the date and time must be updated accordingly.
      **[Install]**
      **WantedBy=multi-user.target**
 
-* Reload the systemctl daemon to read new service file
+* Reload the systemctl daemon to read new service file.
+
      *sudo systemctl daemon-reload*
 
 * Enable the service to start on system boot, then start the service.
+
      *sudo systemctl enable pytholog.service*
      *sudo systemctl start pytholog.service*
  
 * Check the status of the service. 
+
      *sudo systemctl status pytholog.service*
 
     The similar output should be presented:
