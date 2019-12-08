@@ -2,7 +2,7 @@ Log Analyzer
 
 What is it?
 
-This script tails the log files (files with *.log extension) recursively 
+This script tails the log files (files with .log extension) recursively 
 in a custom directory (which is hard-coded inside the script), normalizes them 
 and outputs to SQL. It is supposed to be running as a systemd daemon.
 Optionally, the script can be adjusted to obtain the log directory within 
