@@ -46,6 +46,7 @@ Check the status of the service.
  sudo systemctl status pytholog.service
 
 The similar output should be presented:
+
  ● pytholog.service - Python Log Parser
     Loaded: loaded (/usr/lib/systemd/system/pytholog.service; enabled; vendor preset: disabled)
     Active: active (running) since Sun 2019-12-08 23:31:00 MSK; 59min ago
