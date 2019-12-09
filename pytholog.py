@@ -18,7 +18,7 @@ log_pats = r'(?P<datestamp>(^[a-zA-Z]{3}\s{1,2}\d{1,2})|'\
 log_pat = re.compile(log_pats)
 
 LOCATION = '/var/log/'
-DB_NAME = '/home/krusin.admin@eeu.mkcorp.com/logs2019.db'
+DB_NAME = '/opt/logs2019.db'
 SCHEMA = '''create table if not exists logs
             (id INTEGER PRIMARY KEY, timestamp TEXT, msg TEXT,
             logfile TEXT)'''
