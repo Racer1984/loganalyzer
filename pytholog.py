@@ -96,7 +96,7 @@ def multiplex(sources):
 
 
 def write_logs(log):
-    """Send log lines to the specified database object."""
+    """Send log lines to the database object."""
     db = StorageSqlite(DB_NAME, SCHEMA)
     db.write(query_insert, log)
     db.close()
